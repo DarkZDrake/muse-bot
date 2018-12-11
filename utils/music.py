@@ -413,7 +413,7 @@ class Music:
         else:
             index = random.randint(0,9)
 
-        path  = "data/U's/Aishiteru_Banzai!_({}).ogx".format(muse.Members.get_member(index))
+        path  = "data/U-s/Aishiteru_Banzai!_({}).ogx".format(muse.Members.get_member(index))
         await ctx.send("Canta: {}!".format(muse.Members.get_member(index)))
         if pathlib.Path(path).is_file():
             await ctx.invoke(self.play, request = path)

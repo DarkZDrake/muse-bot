@@ -4,6 +4,9 @@ import discord
 
 from utils import music, utility
 from discord.ext import commands
+from boto.s3.connection import S3Connection
+
+token = S3Connection(os.environ['Token'])
 
 config = utility._import("test.json")
 songs = utility._import("data/music.json")
@@ -23,4 +26,4 @@ async def test(ctx):
 async def wotd(ctx):
     await ctx.send('Your Waifu of the Day:')
 
-bot.run(config.token)
+bot.run(token)

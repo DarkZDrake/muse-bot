@@ -9,7 +9,7 @@ from boto.s3.connection import S3Connection
 token = os.environ['TOKEN']
 
 config = utility._import("test.json")
-songs = utility._import("data/music.json")
+#songs = utility._import("data/music.json")
 bot = commands.Bot(command_prefix=config.prefix)
 bot.load_extension('utils.music')
 

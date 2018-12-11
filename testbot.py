@@ -6,7 +6,7 @@ from utils import music, utility
 from discord.ext import commands
 from boto.s3.connection import S3Connection
 
-token = S3Connection(os.environ['Token'])
+token = S3Connection(os.environ['TOKEN'])
 
 config = utility._import("test.json")
 songs = utility._import("data/music.json")

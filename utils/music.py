@@ -417,3 +417,5 @@ class Music:
         await ctx.send("Canta: {}!".format(muse.Members.get_member(index)))
         if pathlib.Path(path).is_file():
             await ctx.invoke(self.play, request = path)
+        else:
+            print("Qualcosa non va")

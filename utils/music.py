@@ -87,7 +87,7 @@ class SongInfo:
         info = {
             '_filename': file,
             'title': path.stem,
-            'creator':  os.path.basename(os.path.dirname(path)),
+            'creator':  os.path.basename(os.path.dirname(path)).replace("-","'"),
         }
         return cls(info, requester, channel)
 
